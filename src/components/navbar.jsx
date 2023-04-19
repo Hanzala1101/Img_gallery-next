@@ -5,8 +5,8 @@ function navbar() {
   const {run,setsearch } = useContext(contextProvider);
 
   return (
-    <div className="navbar bg-neutral shadow-2xl">
-      <div className="flex-1"> md:
+    <div className="navbar bg-neutral shadow-2xl flex flex-wrap">
+      <div > 
         <a className="btn btn-ghost normal-case text-xl">Image Galery</a>
       </div>
       <div className="flex-none gap-2">
