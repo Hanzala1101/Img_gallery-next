@@ -5,7 +5,7 @@ function navbar() {
   const {run,setsearch } = useContext(contextProvider);
 
   return (
-    <div className="navbar bg-neutral shadow-2xl flex flex-wrap">
+    <div className="navbar bg-neutral shadow-2xl justify-between flex flex-wrap">
       <div > 
         <a className="btn btn-ghost normal-case text-xl">Image Galery</a>
       </div>
