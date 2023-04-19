@@ -6,7 +6,7 @@ function navbar() {
 
   return (
     <div className="navbar bg-neutral shadow-2xl">
-      <div className="flex-1">
+      <div className="flex-1"> md:
         <a className="btn btn-ghost normal-case text-xl">Image Galery</a>
       </div>
       <div className="flex-none gap-2">
