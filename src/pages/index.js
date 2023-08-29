@@ -1,14 +1,18 @@
+import React,{useContext} from "react";
+import Global from '../global/global'
 import Head from "next/head";
-import Image from "next/image";
-import styles from "@/styles/Home.module.css";
 import Navbar from '../components/navbar'
 import Gallery from '../components/body'
-import React from "react";
-import Global from '../global/global'
 import Footer from '../components/footer'
 
+import { contextProvider } from '../global/global'
+
 export default function Home() {
+  const { setpagemore, pagen} = useContext(contextProvider);
   
+  const threeHeaders = Array.from({length: pagen/4}, (_, index) => {
+    return <Gallery key={index} />;
+  });
   return (
     <>
     <Global>
@@ -20,8 +24,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div>
+        <div className="flex justify-center flex-col">
           <Gallery/>
+          {threeHeaders}
+          <button className="btn btn-active btn-ghost" onClick={()=>setpagemore(pagen+4)}>See More...</button>
         </div>
         <Footer/>
       </main>
