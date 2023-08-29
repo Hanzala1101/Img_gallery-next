@@ -38,4 +38,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## you can see it on vercel 
-https://image-gallery-ashen.vercel.app/
+https://img-galary.vercel.app/
