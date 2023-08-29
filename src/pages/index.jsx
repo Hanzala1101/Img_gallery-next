@@ -1,18 +1,13 @@
-import React,{useContext} from "react";
+import React from "react";
 import Global from '../global/global'
 import Head from "next/head";
 import Navbar from '../components/navbar'
 import Gallery from '../components/body'
 import Footer from '../components/footer'
 
-import { contextProvider } from '../global/global'
 
 export default function Home() {
-  const { setpagemore, pagen} = useContext(contextProvider);
-  
-  const threeHeaders = Array.from({length: pagen/4}, (_, index) => {
-    return <Gallery key={index} />;
-  });
+ 
   return (
     <>
     <Global>
@@ -26,8 +21,6 @@ export default function Home() {
       <main>
         <div className="flex justify-center flex-col">
           <Gallery/>
-          {threeHeaders}
-          <button className="btn btn-active btn-ghost" onClick={()=>setpagemore(pagen+4)}>See More...</button>
         </div>
         <Footer/>
       </main>

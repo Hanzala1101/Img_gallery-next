@@ -40,12 +40,16 @@ const global = (props) => {
 
   const setpagemore=()=>{
     setpagen(pagen+4);
+    fetchfun();
+    fetchfun1();
+    fetchfun2();
+    fetchfun3();
     console.log("set page more "+pagen);
   }
   
   useEffect(() => {
     run();
-  }, [pagen]);
+  }, []);
 
 
   return (

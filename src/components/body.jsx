@@ -5,7 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function body() {
-  const { photo,  photo2, photo3, photo1} = useContext(contextProvider);
+  const { photo,  photo2, photo3, photo1, setpagemore, pagen} = useContext(contextProvider);
   
   useEffect(() => {
     AOS.init();
@@ -61,6 +61,8 @@ function body() {
         )}
       </div>
     </div>
+
+    <button className="btn btn-active btn-ghost" onClick={()=>setpagemore(pagen+4)}>See More...</button>
   </>
   );
 }
