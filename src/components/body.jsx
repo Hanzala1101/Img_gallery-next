@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Image from "./image";
 import { contextProvider } from '../global/global'
 import AOS from 'aos';
@@ -6,13 +6,16 @@ import 'aos/dist/aos.css';
 
 function body() {
   const { photo,  photo2, photo3, photo1, setpagemore, pagen} = useContext(contextProvider);
-  
+  const [loding, isloding] = useState()
   useEffect(() => {
     AOS.init();
   }, [])
-
+useEffect(()=>{
+  !photo3 == isloding(false)
+},[photo3])
   return (<>
-  
+  {loding ? <h1>loading......</h1>:
+    <>
     <div className="p-5 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 justify-item-center gap-2">
       <div >
         {!photo ? (
@@ -62,7 +65,7 @@ function body() {
       </div>
     </div>
 
-    <button className="btn btn-active btn-ghost" onClick={()=>setpagemore(pagen+4)}>See More...</button>
+    <button className="btn btn-active btn-ghost" onClick={()=>{{setpagemore(pagen+4),isloding(true)}}}>See More...</button></>}
   </>
   );
 }

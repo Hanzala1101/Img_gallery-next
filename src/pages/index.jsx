@@ -8,8 +8,8 @@ import Footer from '../components/footer'
 
 export default function Home() {
  
+  
   return (
-    <>
     <Global>
       <Navbar/>
       <Head>
@@ -25,6 +25,5 @@ export default function Home() {
         <Footer/>
       </main>
       </Global>
-    </>
   );
 }
