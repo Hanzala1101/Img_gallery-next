@@ -4,11 +4,15 @@ import { saveAs } from 'file-saver'
 import { contextProvider } from '@/global/global'
 import { GiCrossedBones, GiFallDown } from "react-icons/gi";
 import { FaDownload } from "react-icons/fa";
+
+
 function image(props) {
   const {photoset, setphotoset} = useContext(contextProvider)
   const downloadImage = () => {
     saveAs(photoset, "photoset.jpg") // Put your image URL here.
   }
+
+  
   return (
     <>
    
@@ -21,7 +25,7 @@ function image(props) {
 <div className="modal w-screen h-screen ">
   <div className="modal-box  relative">
     <div className="modal-action absolute right-4 top-4">
-      <label htmlFor="my_modal_6" className="btn"><GiCrossedBones></GiCrossedBones></label>
+      <label htmlFor="my_modal_6" className="btn"><GiCrossedBones/></label>
     </div>
     <div className="btn absolute right-4 top-24" onClick={downloadImage}>
       <FaDownload/>
