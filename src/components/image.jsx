@@ -7,9 +7,11 @@ import { FaDownload } from "react-icons/fa";
 
 
 function image(props) {
-  const {photoset, setphotoset} = useContext(contextProvider)
+  const {photoset, setphotoset, sea} = useContext(contextProvider)
   const downloadImage = () => {
-    saveAs(photoset, "photoset.jpg") // Put your image URL here.
+    const number = Math.floor(Math.random()* (100 - 1 + 1)) + 1;
+    const name1 = sea.concat(number)+".jpg";
+    saveAs(photoset, name1.trim()) // Put your image URL here.
   }
 
   
