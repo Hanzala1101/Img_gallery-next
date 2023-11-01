@@ -17,8 +17,8 @@ function image(props) {
     <>
    
 {/* The button to open modal */}
-<label htmlFor="my_modal_6" className="btn h-full w-full m-0 p-0" data-aos="zoom-in-up">
-  <img src ={props.urls.small} key={props.key} onClick={()=>{setphotoset(props.urls.small)}} alt="img not found" className='mb-2'/></label>
+<label htmlFor="my_modal_6" className="btn h-full w-full m-0 p-0 overflow-hidden" data-aos="zoom-in-up">
+  <img src ={props.urls.small} key={props.key} onClick={()=>{setphotoset(props.urls.small)}} alt="img not found" className='mb-2 overflow-hidden'/></label>
 
 {/* Put this part before </body> tag */}
 <input type="checkbox" id="my_modal_6" className="modal-toggle" />
