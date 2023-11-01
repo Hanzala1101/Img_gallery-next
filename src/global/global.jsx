@@ -7,7 +7,7 @@ const global = (props) => {
   const [photo1, setphoto1] = useState([]);
   const [photo2, setphoto2] = useState([]);
   const [photo3, setphoto3] = useState([]);
-  const [sea, setsea] = useState("flower");
+  const [sea, setsea] = useState("fish");
   const [pagen, setpagen] =useState(1);
   const [photoset, setphotoset] = useState()
 

@@ -33,7 +33,7 @@ function navbar() {
   "coffee",
   "winter"];
   const {run,setsearch } = useContext(contextProvider);
-  const [theme, setTheme] = useLocalStorage("theme", "dark");
+  const [theme, setTheme] = useLocalStorage("theme", "wireframe");
 
   //toggles the theme
   const toggleTheme = (name) => {
