@@ -5,7 +5,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function body() {
-  const { photo,  photo2, photo3, photo1, setpagemore, pagen} = useContext(contextProvider);
+  const { photo,  photo2, photo3, photo1, setpagemore, pagen, setphotoset} = useContext(contextProvider);
   const [loding, isloding] = useState()
   useEffect(() => {
     AOS.init();
@@ -23,7 +23,7 @@ useEffect(()=>{
         ) : (
           <div >
             {photo.map((data) => (
-                <Image key={data.id} {...data} />
+                <Image key={data.id} {...data}/>
             ))}
           </div>
         )}
@@ -34,7 +34,7 @@ useEffect(()=>{
         ) : (
           <div >
             {photo1.map((data) => (
-              <Image key={data.id} {...data} />
+              <Image key={data.id} {...data}/>
             ))}
           </div>
         )}
@@ -47,7 +47,7 @@ useEffect(()=>{
         ) : (
           <div >
             {photo2.map((data) => (
-              <Image key={data.id} {...data} />
+              <Image key={data.id} {...data}/>
             ))}
           </div>
         )}
@@ -58,7 +58,7 @@ useEffect(()=>{
         ) : (
           <div >
             {photo3.map((data) => (
-              <Image key={data.id} {...data} />
+              <Image key={data.id} {...data}/>
             ))}
           </div>
         )}

@@ -9,6 +9,7 @@ const global = (props) => {
   const [photo3, setphoto3] = useState([]);
   const [sea, setsea] = useState("flower");
   const [pagen, setpagen] =useState(1);
+  const [photoset, setphotoset] = useState()
 
   const url = `https://api.unsplash.com/search/photos?page=${pagen}&query=${sea}&client_id=WWsod9MiUmyfN--d2Zrx3_zrofyyTWaUaW3naEZhsco`;
   const url1 = `https://api.unsplash.com/search/photos?page=${pagen+1}&query=${sea}&client_id=WWsod9MiUmyfN--d2Zrx3_zrofyyTWaUaW3naEZhsco`;
@@ -54,7 +55,7 @@ const global = (props) => {
   return (
     <>
       <contextProvider.Provider
-        value={{pagen, run, sea, setsearch, photo, photo1, photo2, photo3, setpagemore}}
+        value={{pagen, run, sea, setsearch, photo, photo1, photo2, photo3, setpagemore,photoset, setphotoset}}
       >
         {props.children}
       </contextProvider.Provider>
