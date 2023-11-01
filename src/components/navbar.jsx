@@ -50,7 +50,7 @@ function navbar() {
   return (
     <div className="navbar bg-neutral shadow-2xl">
       <div className="flex-1">
-        <a className="btn btn-ghost normal-case text-xl">Image Galery</a>
+        <a className=" normal-case text-2xl pl-2 font-bold">Image Galery</a>
       </div>
       <div className="flex-none gap-2">
         <div className="form-control">

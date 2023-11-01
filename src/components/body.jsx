@@ -14,12 +14,12 @@ useEffect(()=>{
   !photo3 == isloding(false)
 },[photo3])
   return (<>
-  {loding ? <h1>loading......</h1>:
+  {loding ? <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">loading......</h1>:
     <>
     <div className="p-5 grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 justify-item-center gap-2">
       <div >
         {!photo ? (
-          <h2>loding....</h2>
+          <h2 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">loding....</h2>
         ) : (
           <div >
             {photo.map((data) => (
@@ -30,7 +30,7 @@ useEffect(()=>{
       </div>
       <div >
         {!photo1 ? (
-          <h2>loding....</h2>
+          <h2 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">loding....</h2>
         ) : (
           <div >
             {photo1.map((data) => (
@@ -43,7 +43,7 @@ useEffect(()=>{
       
       <div>
         {!photo2 ? (
-          <h2>loding....</h2>
+          <h2 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">loding....</h2>
         ) : (
           <div >
             {photo2.map((data) => (
@@ -54,7 +54,7 @@ useEffect(()=>{
       </div>
       <div>
         {!photo3 ? (
-          <h2>loding....</h2>
+          <h2 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">loding....</h2>
         ) : (
           <div >
             {photo3.map((data) => (
